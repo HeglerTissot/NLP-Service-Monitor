@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/interface.js"></script>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+    <title>Interface</title>
+</head>
+<body onload="checkStatus()">
+
+    <h2>Server Status Table</h2>
+
+    <table style="width:100%">
+    <tr>
+        <th>Server</th>
+        <th>Link</th>
+        <th>Status</th> 
+        <th>Restart</th>
+    </tr>
+    <tr>
+        <td>BASE_KAIROS_NER_HTTP</td>
+        <td>http://dickens.seas.upenn.edu:4022</td>
+        <td class="status">Online</td>
+        <td><button> restart </button></td>
+    </tr>
+    <tr>
+        <td>BASE_KAIROS_SRL_HTTP </td>
+        <td>http://dickens.seas.upenn.edu:4039</td>
+        <td class="status">Online</td>
+        <td><button> restart </button></td>
+    </tr>
+    <tr>
+        <td>BASE_KAIROS_EVENTS_HTTP</td>
+        <td>http://leguin.seas.upenn.edu:4023</td>
+        <td><div id="status3" class="status"> Offline</div></td>
+        <td onclick="restartSever('status3')"><button> restart </button></td>
+    </tr>
+    <tr>
+        <td>BASE_KAIROS_TEMPORAL_HTTP</td>
+        <td>http://leguin.seas.upenn.edu:4024</td>
+        <td><div id="status4" class="status">Offline</div></td>
+        <!--<td><button class="restart" onclick="restartSever()"> restart </button></td>-->
+        <td onclick="restartSever('status4')"> <button> <a href='http://localhost:8081/info' onclick="return false">restart</button> </td>
+    </tr>
+    <tr>
+        <td>BASE_KAIROS_STORYLINE_HTTP</td>
+        <td>http://leguin.seas.upenn.edu:4025</td>
+        <td class="status">Online</td>
+        <td><button> restart </button></td>
+    </tr>
+    <tr>
+        <td>Multi-Package</td>
+        <td><a href='http://localhost:8081/' target='_blank'>http://localhost:8081/</a></td>
+        <td class="status"><div id='status_multipackage'>checking</div></td>
+        <td><button onclick="javascript:reStart('http://localhost:8081/halt', 'status_multipackage')">restart </button></td>
+    </tr>
+    </table>
+
+    <script>
+    setInterval(checkStatus,10000);
+    </script>
+</body>
+</html>
