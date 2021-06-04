@@ -84,20 +84,24 @@ async function postHalt() {
     });
 }
 
-function checkServer(url, elementId) {
-    statusElement = document.getElementById(elementId);
-    const controller = new AbortController();
-    const signal = controller.signal;
-    const options = { mode: 'no-cors', signal };
-    return fetch(url, options)
-      //.then(setTimeout(() => { statusElement.innerText = 'Offline'; controller.abort(); }, 2000))
-      .then(response => statusElement.innerHTML = 'Online')
-      .catch(error => statusElement.innerHTML = 'Offline');
+function checkServer2(url, elementId) {
+	statusElement = document.getElementById(elementId);
+	let xhr = new XMLHttpRequest();
+	xhr.open('GET', url);
+	xhr.send();
 
-      //then(setTimeout(() => { controller.abort() }, 2000))
-      //.then(response => console.log('Check server response:', 'Online'))
-      //.catch(error => console.error('Check server error:', 'Offline'));
-  }
+	xhr.onerror = function() {
+		statusElement.innerHTML = 'Offline';
+	};	
+
+	xhr.onload  = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			console.log(xhttp.responseText)
+			//Do some stuff
+			alert(elementId);
+		}
+	};
+}
 
 function reStart(url, elementId){
     statusElement = document.getElementById(elementId);
@@ -108,6 +112,25 @@ function reStart(url, elementId){
   }
 
 function checkStatus(){
-    //alert('Checking...');
-    checkServer('http://localhost:8081/info', 'status_multipackage');
+	timestampElement = document.getElementById("lastTimestamp");
+	timestampElement.innerHTML = new Date();
+	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
+	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_multilang_edl'));
+	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_multilang_ner'));
 }
+
+function fetchINFO(url,elementId) {
+	fetch(url /*, options */)
+    .then((response) => response.json())
+    .then((info) => {
+        console.log(url);
+		console.log(info);
+		document.getElementById(elementId).innerHTML = 'Online';
+    })
+    .catch((error) => {
+        console.warn(url);
+		console.warn(error);
+		document.getElementById(elementId).innerHTML = 'Offline';
+	});
+}
+
