@@ -96,11 +96,14 @@ function reStart(url, elementId){
 function checkStatus(){
 	timestampElement = document.getElementById("lastTimestamp");
 	timestampElement.innerHTML = new Date();
+    
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_multilang_edl'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_multilang_ner'));
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'))
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'))
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4038/info','status_srl_spanish_backend'));
 }
 
 function fetchINFO(url,elementId) {
