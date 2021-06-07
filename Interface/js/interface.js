@@ -84,25 +84,7 @@ async function postHalt() {
     });
 }
 
-function checkServer2(url, elementId) {
-	statusElement = document.getElementById(elementId);
-	let xhr = new XMLHttpRequest();
-	xhr.open('GET', url);
-	xhr.send();
-
-	xhr.onerror = function() {
-		statusElement.innerHTML = 'Offline';
-	};	
-
-	xhr.onload  = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			console.log(xhttp.responseText)
-			//Do some stuff
-			alert(elementId);
-		}
-	};
-}
-
+//-------------------------------- Useful Functions ---------------------------------
 function reStart(url, elementId){
     statusElement = document.getElementById(elementId);
     alert('The service is going to be restarted now! ');
@@ -117,6 +99,8 @@ function checkStatus(){
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_multilang_edl'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_multilang_ner'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'))
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'))
 }
 
 function fetchINFO(url,elementId) {
