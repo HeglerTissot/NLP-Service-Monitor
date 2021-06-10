@@ -21,19 +21,20 @@
     <h2>Server Status Table</h2>
 
     <table style="width:100%">
+    
+        <colgroup>
+            <col span="1" style="width: 40%;">
+            <col span="1" style="width: 40%;">
+            <col span="1" style="width: 10%;">
+            <col span="1" style="width: 10%;">
+         </colgroup>
     <tr>
-        <th>Server</th>
+        <th>Server (Dickens)</th>
         <th>Link</th>
         <th>Status</th> 
         <th>Restart</th>
     </tr>
 
-    <tr>
-        <td>Multi-Package</td>
-        <td><a href='https://cogcomp.seas.upenn.edu/lg4029/' target='_blank'>https://cogcomp.seas.upenn.edu/lg4029/</a></td>
-        <td class="status"><div id='status_multipackage'>checking</div></td>
-        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4029/halt', 'status_multipackage')">restart </button></td>
-    </tr>
 
     <tr>
         <td>ZeroShot Text Classification Demo</td>
@@ -65,19 +66,81 @@
 
     <tr>
         <td>SRL English Demo (backend)</td>
-        <td>https://cogcomp.seas.upenn.edu/dc4039/</a></td>
+        <td>https://cogcomp.seas.upenn.edu/dc4039/</td>
         <td class="status"><div id='status_srl_english_backend'>checking</div></td>
         <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4039/halt', 'status_srl_english_backend')">restart </button></td>
     </tr>
 
     <tr>
         <td>SRL Spanish Demo (backend)</td>
-        <td>https://cogcomp.seas.upenn.edu/dc4038/</a></td>
+        <td>https://cogcomp.seas.upenn.edu/dc4038/</td>
         <td class="status"><div id='status_srl_spanish_backend'>checking</div></td>
         <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4038/halt', 'status_srl_spanish_backend')">restart </button></td>
     </tr>
-	
-	</table>
+
+    </table>
+    <br><br>
+    <!-- --------------------------- Demos run on leguin-------------------------- -->
+    <table style="width:100%">
+
+    <colgroup>
+        <col span="1" style="width: 40%;">
+        <col span="1" style="width: 40%;">
+        <col span="1" style="width: 10%;">
+        <col span="1" style="width: 10%;">
+    </colgroup>
+
+    <tr>
+        <th>Server (Leguin)</th>
+        <th>Link</th>
+        <th>Status</th> 
+        <th>Restart</th>
+    </tr>
+    
+    <tr>
+        <td>KAIROS EventsExtraction (frontend)</td>
+        <td><a href='https://cogcomp.seas.upenn.edu/lg4021/' target='_blank'>https://cogcomp.seas.upenn.edu/lg4021/</a></td>
+        <td class="status"><div id='status_kairos_events_frontend'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4021//halt', 'status_kairos_events_frontend')">restart </button></td>
+    </tr>
+
+    <tr>
+        <td>KAIROS EventsExtraction (backend)</td>
+        <td>https://cogcomp.seas.upenn.edu/lg4023/</td>
+        <td class="status"><div id='status_kairos_events_backend'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4023/halt', 'status_kairos_events_backend')">restart </button></td>
+    </tr>
+
+    <tr>
+        <td>KAIROS Temporal (backend)</td>
+        <td>https://cogcomp.seas.upenn.edu/lg4024/</td>
+        <td class="status"><div id='status_kairos_temporal_backend'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4024/halt', 'status_kairos_temporal_backend')">restart </button></td>
+    </tr>
+
+    <tr>
+        <td>KAIROS Storyline (backend)</td>
+        <td>https://cogcomp.seas.upenn.edu/lg4025/</td>
+        <td class="status"><div id='status_kairos_storyline_backend'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4025/halt', 'status_kairos_storyline_backend')">restart </button></td>
+    </tr>
+
+    <tr>
+        <td>Multi-Package (frontend & backend)</td>
+        <td><a href='https://cogcomp.seas.upenn.edu/lg4029/' target='_blank'>https://cogcomp.seas.upenn.edu/lg4029/</a></td>
+        <td class="status"><div id='status_multipackage'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4029/halt', 'status_multipackage')">restart </button></td>
+    </tr>
+
+    <tr>
+        <td>SRL English Demo (backend) (leguin)</td>
+        <td>https://cogcomp.seas.upenn.edu/lg4039/</td>
+        <td class="status"><div id='status_srl_backend_leguin'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4039/halt', 'status_srl_backend_leguin')">restart </button></td>
+    </tr>
+    </table>
+
+   
 
 	<p> Last check (timestamp):
 	<br> <div id="lastTimestamp"></div>
