@@ -17,7 +17,7 @@
     <title>Interface</title>
 </head>
 <body onload="checkStatus()">
-
+   
     <h2>Server Status Table</h2>
 
     <table style="width:100%">
@@ -37,24 +37,38 @@
 
 
     <tr>
-        <td>ZeroShot Text Classification Demo</td>
+        <td>ZeroShot Text Classification Demo (frontend & backend)</td>
         <td><a href='https://cogcomp.seas.upenn.edu/dc4007/' target='_blank'>https://cogcomp.seas.upenn.edu/dc4007/</a></td>
         <td class="status"><div id='status_zeroshot'>checking</div></td>
-        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4007/halt', 'status_zeroshot')">restart </button></td>
+        <td><button onclick="javascript:reStart2('https://cogcomp.seas.upenn.edu/dc4007/halt', 'status_zeroshot')">restart </button></td>
     </tr>
 
 	<tr>
         <td>Multilang EDL Demo (frontend)</td>
         <td><a href='https://cogcomp.seas.upenn.edu/dc4031/' target='_blank'>https://cogcomp.seas.upenn.edu/dc4031/</a></td>
-        <td class="status"><div id='status_multilang_edl'>checking</div></td>
-        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4031/halt', 'status_multilang_edl')">restart </button></td>
+        <td class="status"><div id='status_multilang_edl_frontend'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4031/halt', 'status_multilang_edl_frontend')">restart </button></td>
+    </tr>
+
+    <tr>
+        <td>Multilang EDL Demo (backend)</td>
+        <td>http://macniece.seas.upenn.edu:4032/</td>
+        <td class="status"><div id='status_multilang_edl_backend'>checking</div></td>
+        <td><button onclick="javascript:reStart('http://macniece.seas.upenn.edu:4032/halt', 'status_multilang_edl_backend')">restart </button></td>
     </tr>
 
     <tr>
         <td>Multilang NER Demo (frontend)</td>
         <td><a href='https://cogcomp.seas.upenn.edu/dc4032/' target='_blank'>https://cogcomp.seas.upenn.edu/dc4032/</a></td>
-        <td class="status"><div id='status_multilang_ner'>checking</div></td>
-        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4032/halt', 'status_multilang_ner')">restart </button></td>
+        <td class="status"><div id='status_multilang_ner_frontend'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4032/halt', 'status_multilang_ner_frontend')">restart </button></td>
+    </tr>
+
+    <tr>
+        <td>Multilang NER Demo (backend)</td>
+        <td>https://cogcomp.seas.upenn.edu/dc4033/</td>
+        <td class="status"><div id='status_multilang_ner_backend'>checking</div></td>
+        <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4033/halt', 'status_multilang_ner_backend')">restart </button></td>
     </tr>
 
 	<tr>
@@ -129,6 +143,7 @@
         <td>Multi-Package (frontend & backend)</td>
         <td><a href='https://cogcomp.seas.upenn.edu/lg4029/' target='_blank'>https://cogcomp.seas.upenn.edu/lg4029/</a></td>
         <td class="status"><div id='status_multipackage'>checking</div></td>
+        <!--<td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4029/halt', 'status_multipackage')">restart </button></td>-->
         <td><button onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4029/halt', 'status_multipackage')">restart </button></td>
     </tr>
 

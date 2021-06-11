@@ -85,21 +85,47 @@ async function postHalt() {
 }
 
 //-------------------------------- Useful Functions ---------------------------------
+
 function reStart(url, elementId){
+    var pwd = prompt("Password:");
+    //console.log(url+"?password="+ pwd);
+    var url2 = url +"?password="+ pwd;
     statusElement = document.getElementById(elementId);
-    alert('The service is going to be restarted now! ');
-    statusElement.innerHTML = 'Restarting...';
-    fetch(url);
-    
+
+    alert('If your password is correct, this service will be restarted now!');
+    statusElement.innerHTML = 'Checking...';
+    fetch(url2);   
   }
+/*
+function reStart_pwd(url, elementId){
+    var pwd = prompt("Password:");
+    //console.log(url+"?password="+ pwd);
+    var url2 = url +"?password="+ pwd;
+    statusElement = document.getElementById(elementId);
+    
+    fetch(url2 )
+    .then((response) => response.json())
+    .then((info) => {
+    alert('The password is incorrect! ');
+		console.log(info);
+    })
+    .catch((error) => {
+       // console.warn(url);
+		//console.warn(error);
+    document.getElementById(elementId).innerHTML = 'Restarting...';
+	});
+}
+*/
 
 function checkStatus(){
 	timestampElement = document.getElementById("lastTimestamp");
 	timestampElement.innerHTML = new Date();
     
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
-	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_multilang_edl'));
-	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_multilang_ner'));
+	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_multilang_edl_frontend'));
+    console.log(fetchINFO('http://macniece.seas.upenn.edu:4032/info','status_multilang_edl_backend'));
+	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_multilang_ner_frontend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4033/info','status_multilang_ner_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4038/info','status_srl_spanish_backend'));
