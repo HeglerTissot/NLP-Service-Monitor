@@ -96,7 +96,7 @@ function reStart(url, elementId){
     statusElement.innerHTML = 'Checking...';
     fetch(url2);   
   }
-/*
+
 function reStart_pwd(url, elementId){
     var pwd = prompt("Password:");
     //console.log(url+"?password="+ pwd);
@@ -115,7 +115,7 @@ function reStart_pwd(url, elementId){
     document.getElementById(elementId).innerHTML = 'Restarting...';
 	});
 }
-*/
+
 
 function checkStatus(){
 	timestampElement = document.getElementById("lastTimestamp");
