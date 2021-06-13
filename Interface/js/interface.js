@@ -86,33 +86,44 @@ async function postHalt() {
 
 //-------------------------------- Useful Functions ---------------------------------
 
-function reStart(url, elementId){
-    var pwd = prompt("Password:");
-    //console.log(url+"?password="+ pwd);
-    var url2 = url +"?password="+ pwd;
+function reStart(url, elementId){ 
     statusElement = document.getElementById(elementId);
-
-    alert('If your password is correct, this service will be restarted now!');
-    statusElement.innerHTML = 'Checking...';
-    fetch(url2);   
+    alert('The service is going to be restarted now! ');
+    statusElement.innerHTML = 'Restarting...';
+    fetch(url);
   }
 
-function reStart_pwd(url, elementId){
+function reStart_pwd_1(url, elementId){
+    var pwd = prompt("Password:");
+    var url2 = url +"?password="+ pwd;
+    statusElement = document.getElementById(elementId);
+    alert('If your password is correct, this service will be restarted now!');
+    statusElement.innerHTML = 'Checking...';
+    fetch(url2);  
+}
+
+function reStart_pwd_2(url, elementId){
     var pwd = prompt("Password:");
     //console.log(url+"?password="+ pwd);
     var url2 = url +"?password="+ pwd;
     statusElement = document.getElementById(elementId);
     
-    fetch(url2 )
+    fetch(url2)
     .then((response) => response.json())
-    .then((info) => {
-    alert('The password is incorrect! ');
-		console.log(info);
+    .then((info) => { 
+    if(info == null){
+        alert('Correct password! The service is restarting!');
+        document.getElementById(elementId).innerHTML = 'Restarting...';
+        console.log(info);
+    }else{
+        alert('The password is incorrect! ');
+        console.log(info);
+    }
     })
     .catch((error) => {
-       // console.warn(url);
-		//console.warn(error);
-    document.getElementById(elementId).innerHTML = 'Restarting...';
+        console.warn(url);
+		console.warn(error);
+    //document.getElementById(elementId).innerHTML = 'Restarting...';
 	});
 }
 
