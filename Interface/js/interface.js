@@ -146,6 +146,7 @@ function checkStatus(){
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4024/info','status_kairos_temporal_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4025/info','status_kairos_storyline_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage')); 
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage_2')); 
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4039/info','status_srl_backend_leguin'));
 
 }
