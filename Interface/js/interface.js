@@ -93,7 +93,7 @@ function reStart(url, elementId){
     fetch(url);
   }
 
-function reStart_pwd_1(url, elementId){
+function reStart_pwd_2(url, elementId){
     var pwd = prompt("Password:");
     var url2 = url +"?password="+ pwd;
     statusElement = document.getElementById(elementId);
@@ -102,7 +102,7 @@ function reStart_pwd_1(url, elementId){
     fetch(url2);  
 }
 
-function reStart_pwd_2(url, elementId){
+function reStart_pwd(url, elementId){
     var pwd = prompt("Password:");
     //console.log(url+"?password="+ pwd);
     var url2 = url +"?password="+ pwd;
@@ -145,8 +145,8 @@ function checkStatus(){
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4023/info','status_kairos_events_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4024/info','status_kairos_temporal_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4025/info','status_kairos_storyline_backend'));
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage')); 
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage_2')); 
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage')); 
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4039/info','status_srl_backend_leguin'));
 
 }
