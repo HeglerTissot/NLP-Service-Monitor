@@ -121,8 +121,8 @@ function reStart_pwd(url, elementId){
     }
     })
     .catch((error) => {
-        console.warn(url);
-		console.warn(error);
+        console.warn(url + ' is restarting! Please wait for a while!');
+		//console.warn(error);
     //document.getElementById(elementId).innerHTML = 'Restarting...';
 	});
 }
@@ -134,7 +134,7 @@ function checkStatus(){
     
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_multilang_edl_frontend'));
-    console.log(fetchINFO('http://macniece.seas.upenn.edu:4032/info','status_multilang_edl_backend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/mn4032/info','status_multilang_edl_backend'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_multilang_ner_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4033/info','status_multilang_ner_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'));
