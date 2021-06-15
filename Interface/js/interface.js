@@ -121,7 +121,8 @@ function reStart_pwd(url, elementId){
     }
     })
     .catch((error) => {
-        console.warn(url + ' is restarting! Please wait for a while!');
+        console.warn(url);
+        console.log(url + ' is restarting! Please wait for a while!');
 		//console.warn(error);
     //document.getElementById(elementId).innerHTML = 'Restarting...';
 	});
