@@ -107,7 +107,7 @@ function login() {
     fetch(url)
     .then((response) => response.json())
     .then((info) => { 
-    if(info == "correct"){
+    if(info == "Correct"){
         alert('Sucessfully login!');
         console.log(info);
     }else{
