@@ -156,10 +156,11 @@ function checkStatus(){
 	timestampElement.innerHTML = new Date();
     
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
-	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_multilang_edl_frontend'));
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/mn4032/info','status_multilang_edl_backend'));
-	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_multilang_ner_frontend'));
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4033/info','status_multilang_ner_backend'));
+	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_edl_multilang_frontend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/mn4032/info','status_edl_multilang_backend'));
+	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_ner_multilang_frontend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4034/info','status_ner_english_frontend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4033/info','status_ner_multilang_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4038/info','status_srl_spanish_backend'));
@@ -168,7 +169,7 @@ function checkStatus(){
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4023/info','status_kairos_events_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4024/info','status_kairos_temporal_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4025/info','status_kairos_storyline_backend'));
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage_2')); 
+    //console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage_2')); 
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage')); 
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4039/info','status_srl_backend_leguin'));
 
@@ -181,11 +182,13 @@ function fetchINFO(url,elementId) {
         console.log(url);
 		console.log(info);
 		document.getElementById(elementId).innerHTML = 'Online';
+        //document.getElementById(elementId).style.color = 'green';
     })
     .catch((error) => {
         console.warn(url);
 		console.warn(error);
 		document.getElementById(elementId).innerHTML = 'Offline';
+        //document.getElementById(elementId).style.color = 'red';
 	});
 }
 
