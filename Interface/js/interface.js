@@ -182,15 +182,15 @@ function fetchINFO(url,elementId) {
         console.log(url);
 		console.log(info);
 		document.getElementById(elementId).innerHTML = 'Online';
-        //document.getElementById(elementId).style.color = 'green';
-        document.getElementById(elementId).className = 'btn btn-success';
+        document.getElementById(elementId).style.color = 'green';
+        //document.getElementById(elementId).className = 'btn btn-success';
     })
     .catch((error) => {
         console.warn(url);
 		console.warn(error);
 		document.getElementById(elementId).innerHTML = 'Offline';
-        //document.getElementById(elementId).style.color = 'red';
-        document.getElementById(elementId).className = 'btn btn-danger';
+        document.getElementById(elementId).style.color = 'red';
+        //document.getElementById(elementId).className = 'btn btn-danger';
 	});
 }
 
