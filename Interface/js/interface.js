@@ -166,7 +166,7 @@ function checkStatus(){
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4038/info','status_srl_spanish_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'));
-
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4040/info','status_srl_spanish_frontend'));
     //--------------leguin--------------
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4021/info','status_kairos_events_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4023/info','status_kairos_events_backend'));
