@@ -52,6 +52,12 @@
                             </thead>
                             <tbody>
                             <tr>
+                                <td> BERT Embedding Demo (frontend & backend)</td>
+                                <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/BERT' target='_blank'>https://cogcomp.seas.upenn.edu/dc4001/</a></td>
+                                <td class="status"><div id='status_bert'>checking</div></td>                                 
+                                <td><button  class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4007/', 'status_zeroshot')">restart </button></td>
+                            </tr>
+                            <tr>
                                 <td>ZeroShot Text Classification Demo (frontend & backend)</td>
                                 <td><a href='https://cogcomp.seas.upenn.edu/dc4007/' target='_blank'>https://cogcomp.seas.upenn.edu/dc4007/</a></td>
                                 <td class="status"><div id='status_zeroshot'>checking</div></td>                                 
@@ -63,13 +69,6 @@
                                 <td><a href='https://cogcomp.seas.upenn.edu/dc4031/' target='_blank'>https://cogcomp.seas.upenn.edu/dc4031/</a></td>
                                 <td class="status"><div id='status_edl_multilang_frontend'>checking</div></td>
                                 <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4031/halt', 'status_edl_multilang_frontend')">restart </button></td>
-                            </tr>
-
-                            <tr>
-                                <td>Multilang EDL Demo (backend)</td>
-                                <td>https://cogcomp.seas.upenn.edu/mn4032/</td>
-                                <td class="status"><div id='status_edl_multilang_backend'>checking</div></td>
-                                <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/mn4032/halt', 'status_edl_multilang_backend')">restart </button></td>
                             </tr>
 
                             <tr>
@@ -100,6 +99,12 @@
                                 <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4037/halt', 'status_srl_english_frontend')">restart </button></td>
                             </tr>
 
+                            <tr>
+                                <td>SRL Spanish Demo (backend)</td>
+                                <td>https://cogcomp.seas.upenn.edu/dc4038/</td>
+                                <td class="status"><div id='status_srl_spanish_backend'>checking</div></td>
+                                <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4038/halt', 'status_srl_spanish_backend')">restart </button></td>
+                            </tr>
 
                             <tr>
                                 <td>SRL English Demo (backend)</td>
@@ -108,12 +113,7 @@
                                 <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4039/halt', 'status_srl_english_backend')">restart </button></td>
                             </tr>
 
-                            <tr>
-                                <td>SRL Spanish Demo (backend)</td>
-                                <td>https://cogcomp.seas.upenn.edu/dc4038/</td>
-                                <td class="status"><div id='status_srl_spanish_backend'>checking</div></td>
-                                <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4038/halt', 'status_srl_spanish_backend')">restart </button></td>
-                            </tr>
+            
                             </tbody>
                         </table>
                     </div>
@@ -200,7 +200,53 @@
                     </div>
                 </div>
             </div>
+
+        <!-- --------------------------- Demos run on Macniece-------------------------- -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Demo Status Table (Macniece)</h2>
+                </div>
+            </div>          
+            <!-- ********* Macniece Table *********** -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrap">
+                        <table  class="table table-striped">                         
+                                <!-- <colgroup>
+                                    <col span="1" style="width: 40%;">
+                                    <col span="1" style="width: 40%;">
+                                    <col span="1" style="width: 10%;">
+                                    <col span="1" style="width: 10%;">
+                                </colgroup> -->
+                            <thead>
+                                <tr>
+                                    <th style="font-weight:bold; font-size: 15px;">Demo</th>
+                                    <th style="font-weight:bold; font-size: 15px;">Link</th>
+                                    <th style="font-weight:bold; font-size: 15px;">Status</th> 
+                                    <th style="font-weight:bold; font-size: 15px;">Restart</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Multilang EDL Demo (backend)</td>
+                                    <td>https://cogcomp.seas.upenn.edu/mn4032/</td>
+                                    <td class="status"><div id='status_edl_multilang_backend'>checking</div></td>
+                                    <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/mn4032/halt', 'status_edl_multilang_backend')">restart </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        Last check (timestamp):
+                        <br> <div id="lastTimestamp"></div>
+                        <script>
+                        setInterval(checkStatus,10000);
+                        </script>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     </section> 
 
 </body>
