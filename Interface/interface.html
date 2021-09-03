@@ -75,28 +75,36 @@
                             </tr>
 
                             <tr>
-                                <td>Multilang EDL Demo (frontend)</td>
-                                <td><a href='https://cogcomp.seas.upenn.edu/dc4031/' target='_blank'>https://cogcomp.seas.upenn.edu/dc4031/</a></td>
+                                <!-- halt function need to be changed -->
+                                <td>EDL English Demo (frontend & backend)</td>
+                                <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/EDLEnglish' target='_blank'>https://cogcomp.seas.upenn.edu/dc4030/</a></td>
+                                <td class="status"><div id='status_edl_english_fb'>checking</div></td>
+                                <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4030/', 'status_edl_english_fb')">restart </button></td>
+                            </tr>
+
+                            <tr>
+                                <td>EDL Multilang Demo (frontend)</td>
+                                <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/MultilanguageEDL' target='_blank'>https://cogcomp.seas.upenn.edu/dc4031/</a></td>
                                 <td class="status"><div id='status_edl_multilang_frontend'>checking</div></td>
                                 <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4031/halt', 'status_edl_multilang_frontend')">restart </button></td>
                             </tr>
 
                             <tr>
-                                <td>Multilang NER Demo (frontend)</td>
+                                <td>NER Multilang Demo (frontend)</td>
                                 <td><a href='https://cogcomp.seas.upenn.edu/dc4032/' target='_blank'>https://cogcomp.seas.upenn.edu/dc4032/</a></td>
                                 <td class="status"><div id='status_ner_multilang_frontend'>checking</div></td>
                                 <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4032/halt', 'status_ner_multilang_frontend')">restart </button></td>
                             </tr>
 
                             <tr>
-                                <td>Multilang NER Demo (backend)</td>
+                                <td>NER Multilang Demo (backend)</td>
                                 <td>https://cogcomp.seas.upenn.edu/dc4033/</td>
                                 <td class="status"><div id='status_ner_multilang_backend'>checking</div></td>
                                 <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4033/halt', 'status_ner_multilang_backend')">restart </button></td>
                             </tr>
 
                             <tr>
-                                <td>Eng NER Demo (backend)</td>
+                                <td>NER English Demo (backend)</td>
                                 <td>https://cogcomp.seas.upenn.edu/dc4034/</td>
                                 <td class="status"><div id='status_ner_english_frontend'>checking</div></td>
                                 <td><button class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4034/halt', 'status_ner_english_frontend')">restart </button></td>
@@ -202,15 +210,12 @@
                             </tr>
                             </tbody>
                         </table>
-                        Last check (timestamp):
-                        <br> <div id="lastTimestamp"></div>
-                        <script>
-                        setInterval(checkStatus,10000);
-                        </script>
+
                     </div>
                 </div>
             </div>
 
+        <br><br>
         <!-- --------------------------- Demos run on Macniece-------------------------- -->
         <div class="container">
             <div class="row justify-content-center">
