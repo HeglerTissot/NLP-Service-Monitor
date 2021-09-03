@@ -154,17 +154,18 @@ function login() {
 function checkStatus(){
 	timestampElement = document.getElementById("lastTimestamp");
 	timestampElement.innerHTML = new Date();
-    
+    //--------------dickens--------------
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4001/info','status_bert'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_edl_multilang_frontend'));
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/mn4032/info','status_edl_multilang_backend'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_ner_multilang_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4033/info','status_ner_multilang_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4034/info','status_ner_english_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4037/info','status_srl_english_frontend'));
-    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4038/info','status_srl_spanish_backend'));
-    
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'));
+
+    //--------------leguin--------------
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4021/info','status_kairos_events_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4023/info','status_kairos_events_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4024/info','status_kairos_temporal_backend'));
@@ -172,6 +173,9 @@ function checkStatus(){
     //console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage_2')); 
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4029/info','status_multipackage')); 
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4039/info','status_srl_backend_leguin'));
+
+    //--------------macniece--------------
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/mn4032/info','status_edl_multilang_backend'));
 
 }
 
