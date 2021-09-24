@@ -101,27 +101,27 @@ function reStart(url, elementId){
 //   fetch(url2);  
 // }
 
-function login() {
-    var pwd = prompt("Password:");
-    var url = 'https://cogcomp.seas.upenn.edu/dc4050/loginCheck' +"?password="+ pwd;
-    fetch(url)
-    .then((response) => response.json())
-    .then((info) => { 
-    if(info == "Correct"){
-        alert('Sucessfully login!');
-        console.log(info);
-    }else{
-        alert("The password is incorrect!")
-        location.reload();
-    }
-    })
-    .catch((error) => {
-        console.warn(url);
-        console.warn(error);
-        alert("Something seems wrong... Please contact service administrator!")
-		window.location.replace("https://cogcomp.seas.upenn.edu/page/demos/");
-	});
-}
+// function login() {
+//     var pwd = prompt("Password:");
+//     var url = 'https://cogcomp.seas.upenn.edu/dc4050/loginCheck' +"?password="+ pwd;
+//     fetch(url)
+//     .then((response) => response.json())
+//     .then((info) => { 
+//     if(info == "Correct"){
+//         alert('Sucessfully login!');
+//         console.log(info);
+//     }else{
+//         alert("The password is incorrect!")
+//         location.reload();
+//     }
+//     })
+//     .catch((error) => {
+//         console.warn(url);
+//         console.warn(error);
+//         alert("Something seems wrong... Please contact service administrator!")
+// 		window.location.replace("https://cogcomp.seas.upenn.edu/page/demos/");
+// 	});
+// }
  
 
 // function reStart_pwd(url, elementId){
@@ -157,7 +157,6 @@ function checkStatus(){
     //--------------dickens--------------
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4001/status/','status_bert'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4006/status/','status_summarization'));
-	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4007/info','status_zeroshot'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4022/info','status_karios_ner_english_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4030/status/','status_edl_english_fb'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_edl_multilang_frontend'));
@@ -169,6 +168,7 @@ function checkStatus(){
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4039/info','status_srl_english_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4040/info','status_srl_spanish_frontend'));
     //--------------leguin--------------
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4007/info','status_zeroshot'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4021/info','status_kairos_events_frontend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4023/info','status_kairos_events_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/lg4024/info','status_kairos_temporal_backend'));

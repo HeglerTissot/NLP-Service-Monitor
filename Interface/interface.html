@@ -20,7 +20,7 @@
         </style> -->
     <title>Restart Services</title>
 </head>
-<body onload="login(); checkStatus();">
+<body onload="checkStatus();">
 
     <!-- <h2>Server Status Table</h2> -->
     <section class="ftco-section">
@@ -56,7 +56,7 @@
                                 <td> BERT Embedding Demo (frontend & backend)</td>
                                 <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/BERT' target='_blank'>https://cogcomp.seas.upenn.edu/dc4001/</a></td>
                                 <td class="status"><div id='status_bert'>checking</div></td>                                 
-                                <td><button  class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4001/status/', 'status_bert')">restart </button></td>
+                                <td><button  class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4001/status/', 'status_bert')">restart </button></td> <!--placeholder -->
                             </tr>
 
                             <tr>
@@ -64,15 +64,9 @@
                                 <td> Summarization Demo (frontend & backend)</td>
                                 <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/Summarization' target='_blank'>https://cogcomp.seas.upenn.edu/dc4006/</a></td>
                                 <td class="status"><div id='status_summarization'>checking</div></td>                                 
-                                <td><button  class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4006/status/', 'status_summarization')">restart </button></td>
+                                <td><button  class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4006/status/', 'status_summarization')">restart </button></td> <!--placeholder -->
                             </tr>
 
-                            <tr>
-                                <td>ZeroShot Text Classification Demo (frontend & backend)</td>
-                                <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/ZeroShotTextClassification' target='_blank'>https://cogcomp.seas.upenn.edu/dc4007/</a></td>
-                                <td class="status"><div id='status_zeroshot'>checking</div></td>                                 
-                                <td><button  class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/dc4007/halt', 'status_zeroshot')">restart </button></td>
-                            </tr>
 
                             <tr>
                                 <td>KARIOS NER English (backend)</td>
@@ -180,6 +174,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            
+                            <tr>
+                                <td>ZeroShot Text Classification Demo (frontend & backend)</td>
+                                <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/ZeroShotTextClassification' target='_blank'>https://cogcomp.seas.upenn.edu/lg4007/</a></td>
+                                <td class="status"><div id='status_zeroshot'>checking</div></td>                                 
+                                <td><button  class="btn btn-info" onclick="javascript:reStart('https://cogcomp.seas.upenn.edu/lg4007/halt', 'status_zeroshot')">restart </button></td>
+                            </tr>
+
                             <tr>
                                 <td>KAIROS EventsExtraction (frontend)</td>
                                 <td><a href='https://cogcomp.seas.upenn.edu/page/demo_view/EventExtraction' target='_blank'>https://cogcomp.seas.upenn.edu/lg4021/</a></td>                               
