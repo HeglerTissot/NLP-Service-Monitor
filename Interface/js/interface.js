@@ -156,6 +156,7 @@ function checkStatus(){
 	timestampElement.innerHTML = new Date();
     //--------------dickens--------------
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4001/status/','status_bert'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4005/info','status_qaEvent'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4006/status/','status_summarization'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4022/info','status_karios_ner_english_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4030/info','status_edl_english_frontend'));
