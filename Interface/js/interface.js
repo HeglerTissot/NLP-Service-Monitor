@@ -159,6 +159,7 @@ function checkStatus(){
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4005/info','status_qaEvent'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4006/status/','status_summarization'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4022/info','status_karios_ner_english_backend'));
+    console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4029/status','status_edl_english_backend'));
     console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4030/info','status_edl_english_frontend'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4031/info','status_edl_multilang_frontend'));
 	console.log(fetchINFO('https://cogcomp.seas.upenn.edu/dc4032/info','status_ner_multilang_frontend'));
